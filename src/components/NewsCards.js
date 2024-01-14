@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 function NewsCards() {
-  return (
-    <div>tae</div>
-  )
+	return <div>News List</div>;
 }
 
-export default NewsCards
+export default NewsCards;
