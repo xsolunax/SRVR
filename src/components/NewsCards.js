@@ -24,9 +24,11 @@ function NewsCards() {
 		<div className="news-list">
 			{news.map((newsItem) => {
 				return (
-					<div className="news-item" key={newsItem.id} style={{ backgroundImage: `${newsItem.pathImg}` }}>
-						<p className="news-title">{newsItem.title}</p>
-						<p className="news-date">{newsItem.date}</p>
+					<div className="news-item" key={newsItem.id} style={{ backgroundImage: `url(${newsItem.imgPath})` }}>
+						<div className="news-heading">
+							<p className="news-title">{newsItem.title}</p>
+							<p className="news-date">{newsItem.date}</p>
+						</div>
 					</div>
 				);
 			})}

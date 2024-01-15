@@ -103,31 +103,36 @@ body {
 
 .news-item {
 	height: 250px;
-	background-color: #e4e4e4;
+	background-color: #181e28;
 	border-radius: 10px;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
+	background-size: contain;
+	overflow: hidden;
 }
 
-.news-item p {
+.news-heading {
+	backdrop-filter: blur(12px);
+}
+
+.news-heading p {
 	font-family: 'Montserrat', sans-serif;
 	text-transform: capitalize;
 	letter-spacing: normal;
-	padding: 0px 20px;
-	color: #181e28;
+	padding: 5px 20px;
+	color: #e4e4e4;
 }
 
 .news-title {
 	font-size: 1.3rem;
-	margin-bottom: 5px;
 	font-weight: 700;
 }
 
 .news-date {
 	font-weight: 100;
 	font-size: 13px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	font-weight: 400;
 }
 
