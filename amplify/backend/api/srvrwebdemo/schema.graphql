@@ -13,5 +13,5 @@ type News @model {
       queryField: "newsByDate"
       sortKeyFields: ["createdAt"]
     )
-  createdAt: String!
+  createdAt: AWSDateTime!
 }
