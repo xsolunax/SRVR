@@ -7,4 +7,9 @@ type News @model {
   title: String!
   date: String!
   imgPath: String!
+  @index(
+    name:"newsByDate"
+    queryField: "newsByDate"
+    sortKeyFields: ["createdAt"]
+  )
 }
