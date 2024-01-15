@@ -28,14 +28,10 @@ export default function NewsUpdateForm(props) {
     title: "",
     date: "",
     imgPath: "",
-    type: "",
-    createdAt: "",
   };
   const [title, setTitle] = React.useState(initialValues.title);
   const [date, setDate] = React.useState(initialValues.date);
   const [imgPath, setImgPath] = React.useState(initialValues.imgPath);
-  const [type, setType] = React.useState(initialValues.type);
-  const [createdAt, setCreatedAt] = React.useState(initialValues.createdAt);
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
     const cleanValues = newsRecord
@@ -44,8 +40,6 @@ export default function NewsUpdateForm(props) {
     setTitle(cleanValues.title);
     setDate(cleanValues.date);
     setImgPath(cleanValues.imgPath);
-    setType(cleanValues.type);
-    setCreatedAt(cleanValues.createdAt);
     setErrors({});
   };
   const [newsRecord, setNewsRecord] = React.useState(newsModelProp);
@@ -68,8 +62,6 @@ export default function NewsUpdateForm(props) {
     title: [{ type: "Required" }],
     date: [{ type: "Required" }],
     imgPath: [{ type: "Required" }],
-    type: [{ type: "Required" }],
-    createdAt: [{ type: "Required" }],
   };
   const runValidationTasks = async (
     fieldName,
@@ -100,8 +92,6 @@ export default function NewsUpdateForm(props) {
           title,
           date,
           imgPath,
-          type,
-          createdAt,
         };
         const validationResponses = await Promise.all(
           Object.keys(validations).reduce((promises, fieldName) => {
@@ -165,8 +155,6 @@ export default function NewsUpdateForm(props) {
               title: value,
               date,
               imgPath,
-              type,
-              createdAt,
             };
             const result = onChange(modelFields);
             value = result?.title ?? value;
@@ -193,8 +181,6 @@ export default function NewsUpdateForm(props) {
               title,
               date: value,
               imgPath,
-              type,
-              createdAt,
             };
             const result = onChange(modelFields);
             value = result?.date ?? value;
@@ -221,8 +207,6 @@ export default function NewsUpdateForm(props) {
               title,
               date,
               imgPath: value,
-              type,
-              createdAt,
             };
             const result = onChange(modelFields);
             value = result?.imgPath ?? value;
@@ -236,62 +220,6 @@ export default function NewsUpdateForm(props) {
         errorMessage={errors.imgPath?.errorMessage}
         hasError={errors.imgPath?.hasError}
         {...getOverrideProps(overrides, "imgPath")}
-      ></TextField>
-      <TextField
-        label="Type"
-        isRequired={true}
-        isReadOnly={false}
-        value={type}
-        onChange={(e) => {
-          let { value } = e.target;
-          if (onChange) {
-            const modelFields = {
-              title,
-              date,
-              imgPath,
-              type: value,
-              createdAt,
-            };
-            const result = onChange(modelFields);
-            value = result?.type ?? value;
-          }
-          if (errors.type?.hasError) {
-            runValidationTasks("type", value);
-          }
-          setType(value);
-        }}
-        onBlur={() => runValidationTasks("type", type)}
-        errorMessage={errors.type?.errorMessage}
-        hasError={errors.type?.hasError}
-        {...getOverrideProps(overrides, "type")}
-      ></TextField>
-      <TextField
-        label="Created at"
-        isRequired={true}
-        isReadOnly={false}
-        value={createdAt}
-        onChange={(e) => {
-          let { value } = e.target;
-          if (onChange) {
-            const modelFields = {
-              title,
-              date,
-              imgPath,
-              type,
-              createdAt: value,
-            };
-            const result = onChange(modelFields);
-            value = result?.createdAt ?? value;
-          }
-          if (errors.createdAt?.hasError) {
-            runValidationTasks("createdAt", value);
-          }
-          setCreatedAt(value);
-        }}
-        onBlur={() => runValidationTasks("createdAt", createdAt)}
-        errorMessage={errors.createdAt?.errorMessage}
-        hasError={errors.createdAt?.hasError}
-        {...getOverrideProps(overrides, "createdAt")}
       ></TextField>
       <Flex
         justifyContent="space-between"

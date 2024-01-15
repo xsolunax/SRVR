@@ -3,13 +3,6 @@ import { generateClient } from 'aws-amplify/api';
 import * as queries from '../graphql/queries';
 
 const client = generateClient();
-const variables = {
-	filter: {
-		priority: {
-			eq: 'date',
-		},
-	},
-};
 
 function NewsCards() {
 	const [news, setNews] = useState([]);
@@ -20,7 +13,7 @@ function NewsCards() {
 
 	const fetchNews = async () => {
 		try {
-			const newsData = await client.graphql({ query: queries.listNews, variables: variables });
+			const newsData = await client.graphql({ query: queries.listNews});
 			const newsList = newsData.data.listNews.items;
 			setNews(newsList);
 		} catch (error) {
