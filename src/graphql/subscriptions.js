@@ -6,7 +6,6 @@ export const onCreateNews = /* GraphQL */ `
     onCreateNews(filter: $filter) {
       id
       title
-      description
       date
       imgPath
       createdAt
@@ -20,7 +19,6 @@ export const onUpdateNews = /* GraphQL */ `
     onUpdateNews(filter: $filter) {
       id
       title
-      description
       date
       imgPath
       createdAt
@@ -34,7 +32,6 @@ export const onDeleteNews = /* GraphQL */ `
     onDeleteNews(filter: $filter) {
       id
       title
-      description
       date
       imgPath
       createdAt

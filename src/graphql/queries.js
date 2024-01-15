@@ -6,7 +6,6 @@ export const getNews = /* GraphQL */ `
     getNews(id: $id) {
       id
       title
-      description
       date
       imgPath
       createdAt
@@ -25,7 +24,6 @@ export const listNews = /* GraphQL */ `
       items {
         id
         title
-        description
         date
         imgPath
         createdAt

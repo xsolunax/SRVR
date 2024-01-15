@@ -9,7 +9,6 @@ export const createNews = /* GraphQL */ `
     createNews(input: $input, condition: $condition) {
       id
       title
-      description
       date
       imgPath
       createdAt
@@ -26,7 +25,6 @@ export const updateNews = /* GraphQL */ `
     updateNews(input: $input, condition: $condition) {
       id
       title
-      description
       date
       imgPath
       createdAt
@@ -43,7 +41,6 @@ export const deleteNews = /* GraphQL */ `
     deleteNews(input: $input, condition: $condition) {
       id
       title
-      description
       date
       imgPath
       createdAt

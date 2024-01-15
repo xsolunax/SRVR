@@ -13,7 +13,8 @@
     },
     "categories": {
       "api": {
-        "NewsAPI": {}
+        "NewsAPI": {},
+        "srvrwebdemo": {}
       }
     }
   }
