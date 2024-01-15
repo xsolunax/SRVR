@@ -12,4 +12,5 @@ type News @model {
     queryField: "newsByDate"
     sortKeyFields: ["createdAt"]
   )
+  createdAt: String!
 }
