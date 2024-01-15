@@ -25,11 +25,15 @@ export declare type NewsUpdateFormInputValues = {
     title?: string;
     date?: string;
     imgPath?: string;
+    type?: string;
+    createdAt?: string;
 };
 export declare type NewsUpdateFormValidationValues = {
     title?: ValidationFunction<string>;
     date?: ValidationFunction<string>;
     imgPath?: ValidationFunction<string>;
+    type?: ValidationFunction<string>;
+    createdAt?: ValidationFunction<string>;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type NewsUpdateFormOverridesProps = {
@@ -37,6 +41,8 @@ export declare type NewsUpdateFormOverridesProps = {
     title?: PrimitiveOverrideProps<TextFieldProps>;
     date?: PrimitiveOverrideProps<TextFieldProps>;
     imgPath?: PrimitiveOverrideProps<TextFieldProps>;
+    type?: PrimitiveOverrideProps<TextFieldProps>;
+    createdAt?: PrimitiveOverrideProps<TextFieldProps>;
 } & EscapeHatchProps;
 export declare type NewsUpdateFormProps = React.PropsWithChildren<{
     overrides?: NewsUpdateFormOverridesProps | undefined | null;
