@@ -21,10 +21,16 @@ function NewsCards() {
 		}
 	};
 	return (
-		<>
-			<a className="twitter-timeline" data-height="800" data-theme="dark" href="https://twitter.com/SRVR_Esports?ref_src=twsrc%5Etfw"></a>{' '}
-		</>
+		<div className="news-list">
+			{news.map((newsItem) => {
+				return (
+					<div className="news-item" key={newsItem.id} style={{ backgroundImage: `${newsItem.pathImg}` }}>
+						<p className="news-title">{newsItem.title}</p>
+						<p className="news-date">{newsItem.date}</p>
+					</div>
+				);
+			})}
+		</div>
 	);
 }
-
 export default NewsCards;

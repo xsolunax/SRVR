@@ -7,5 +7,5 @@ type News @model {
 	id: ID!
 	title: String!
 	date: String!
-	imgPath: String!
+	imgPath: String
 }
