@@ -71,6 +71,7 @@ body {
 /* Global Default - Panel */
 .panel {
 	margin: 20px 0px;
+	padding: 0px 200px;
 }
 
 .panel-container {
@@ -81,6 +82,7 @@ body {
 
 .panel-title {
 	font-size: 4rem;
+	margin-bottom: 40px;
 }
 
 .inv {
@@ -97,7 +99,6 @@ body {
 	grid-template-columns: repeat(auto-fill, minmax(440px, 440px));
 	justify-content: center;
 	gap: 50px 50px; */
-	margin-top: 40px;
 }
 
 .news-item {
@@ -128,4 +129,8 @@ body {
 	font-size: 13px;
 	margin-bottom: 20px;
 	font-weight: 400;
+}
+
+.twitter-timeline {
+	width: 100% !important;
 }
