@@ -61,7 +61,7 @@ export default function NewsUpdateForm(props) {
   const validations = {
     title: [{ type: "Required" }],
     date: [{ type: "Required" }],
-    imgPath: [{ type: "Required" }],
+    imgPath: [],
   };
   const runValidationTasks = async (
     fieldName,
@@ -91,7 +91,7 @@ export default function NewsUpdateForm(props) {
         let modelFields = {
           title,
           date,
-          imgPath,
+          imgPath: imgPath ?? null,
         };
         const validationResponses = await Promise.all(
           Object.keys(validations).reduce((promises, fieldName) => {
@@ -197,7 +197,7 @@ export default function NewsUpdateForm(props) {
       ></TextField>
       <TextField
         label="Img path"
-        isRequired={true}
+        isRequired={false}
         isReadOnly={false}
         value={imgPath}
         onChange={(e) => {

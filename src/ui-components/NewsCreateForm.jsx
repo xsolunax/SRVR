@@ -40,7 +40,7 @@ export default function NewsCreateForm(props) {
   const validations = {
     title: [{ type: "Required" }],
     date: [{ type: "Required" }],
-    imgPath: [{ type: "Required" }],
+    imgPath: [],
   };
   const runValidationTasks = async (
     fieldName,
@@ -178,7 +178,7 @@ export default function NewsCreateForm(props) {
       ></TextField>
       <TextField
         label="Img path"
-        isRequired={true}
+        isRequired={false}
         isReadOnly={false}
         value={imgPath}
         onChange={(e) => {

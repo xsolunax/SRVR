@@ -62,10 +62,15 @@ body {
 
 /* Homepage */
 .banner {
-	background-image: url('../public/banner.jpeg');
+	/* background-image: url('../public/banner.jpeg'); */
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 100vh;
+	margin-bottom: 120px;
+}
+
+.banner video {
+	width: 100%;
 }
 
 /* Global Default - Panel */
@@ -110,6 +115,7 @@ body {
 	justify-content: flex-end;
 	background-size: contain;
 	overflow: hidden;
+	box-shadow: 5px 5px 10px rgba(18, 18, 18, 0.5);
 }
 
 .news-heading {
