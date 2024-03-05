@@ -4,8 +4,9 @@
 	box-sizing: border-box;
 	margin: 0;
 	color: #e4e4e4;
-	font-family: 'Impact';
+	font-family: 'Montserrat';
 	letter-spacing: 0.2rem;
+	font-weight: 700;
 	text-transform: uppercase;
 	user-select: none !important;
 }
@@ -37,7 +38,7 @@ body {
 }
 
 .nav-buttons a {
-	font-size: 1.6rem;
+	font-size: 1.3rem;
 	text-decoration: none;
 	color: #e4e4e4;
 	padding: 5px 10px;
@@ -46,7 +47,7 @@ body {
 	background-size: 500px;
 	background-repeat: no-repeat;
 	background-position: 100%;
-	transition: background 0.5s linear, color 0.5s ease-in-out 0s;
+	transition: background 0.3s linear, color 0.3s ease-in-out 0s;
 	cursor: pointer;
 }
 
