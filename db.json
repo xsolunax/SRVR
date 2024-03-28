@@ -1,0 +1,16 @@
+{
+	"newsList": [
+		{ "id": "1", "title": "SRVR ESPORTS will be competing in VCT Open Qualifiers 2", "date": "February 12, 2024", "imgPath": "https://srvr-assets.s3.us-west-1.amazonaws.com/VCT_DAY_1.png" },
+		{ "id": "2", "title": "SRVR ESPORTS LOST the first match up of VCT Open Qualifiers 2 against TAMU Maroon", "date": "February 12, 2024", "imgPath": "https://srvr-assets.s3.us-west-1.amazonaws.com/Defeat_vct.png" },
+		{ "id": "3", "title": "SRVR ESPORTS finished 4th place in UBCEA x SFUEA x UVicEA Winter WonderLAN Tournament!", "date": "February 17, 2024", "imgPath": "https://srvr-assets.s3.us-west-1.amazonaws.com/Defeat_ubc.png" },
+		{ "id": "4", "title": "1Millisecond Tournament day!", "date": "February 18, 2024", "imgPath": "https://srvr-assets.s3.us-west-1.amazonaws.com/MatchDay+red.png" },
+		{ "id": "5", "title": "SRVR x PERLAS take on Revitalize International Tournament!", "date": "February 24, 2024", "imgPath": "https://srvr-assets.s3.us-west-1.amazonaws.com/MatchDay+perlas.png" },
+		{ "id": "6", "title": "SRVR Red take on LF8 Full Gambit Tournament!", "date": "March 2, 2024", "imgPath": "https://srvr-assets.s3.us-west-1.amazonaws.com/MatchDay+red.png" }
+	],
+	"tournamentSchedule": [
+		{ "id": "1", "date": "February 12, 2024", "title": "VCT Challengers Open Qualifier 2", "time": "4:00 PM " },
+		{ "id": "2", "date": "February 16, 2024", "title": "SRVR UBCEA x SFUEA x UVicEA Winter WonderLAN", "time": "" },
+		{ "id": "3", "date": "February 18, 2024", "title": "1Millisecond Tournament", "time": "" },
+		{ "id": "4", "date": "February 7, 2024", "title": "", "time": "" }
+	]
+}

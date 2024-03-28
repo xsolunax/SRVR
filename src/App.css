@@ -116,10 +116,20 @@ body {
 	background-size: contain;
 	overflow: hidden;
 	box-shadow: 5px 5px 10px rgba(18, 18, 18, 0.5);
+	background-position: 0px -40px;
+	background-repeat: no-repeat;
+}
+
+.news-item:hover .news-heading {
+	padding: 80px 0px;
+}
+.news-item:hover .news-heading p {
+	padding: 20px 20px;
 }
 
 .news-heading {
 	backdrop-filter: blur(12px);
+	transition: padding 0.2s ease-in-out 0s;
 }
 
 .news-heading p {
@@ -128,20 +138,17 @@ body {
 	letter-spacing: normal;
 	padding: 5px 20px;
 	color: #e4e4e4;
+	transition: padding 0.2s ease-in-out 0s;
 }
 
 .news-title {
-	font-size: 1.3rem;
+	font-size: 1.1rem;
 	font-weight: 700;
 }
 
 .news-date {
 	font-weight: 100;
-	font-size: 13px;
+	font-size: 12px;
 	margin-bottom: 10px;
 	font-weight: 400;
-}
-
-.twitter-timeline {
-	width: 100% !important;
 }

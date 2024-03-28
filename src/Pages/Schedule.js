@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+/* 
+	{id: '', date: '', title: ''}
+*/
+
+const tournamentSchedule = [
+	{ id: '1', date: 'February 12, 2024', title: 'VCT Challengers Open Qualifier 2', time: '4:00 PM '},
+	{ id: '2', date: 'February 16, 2024', title: 'SRVR UBCEA x SFUEA x UVicEA Winter WonderLAN', time: '' },
+	{ id: '3', date: 'February 18, 2024', title: '1Millisecond Tournament', time: '' },
+	{ id: '4', date: 'February 7, 2024', title: '', time: '' },
+];
+
+const sortedTournamentList = tournamentSchedule.map((item) => item).sort((a, b) => parseInt(b.id) - parseInt(a.id));
 
 function Schedule() {
+	const [schedule, setSchedule] = useState([]);
+
+	useEffect(() => {
+		setSchedule(sortedTournamentList);
+	}, []);
+
 	return (
-		<div className="panel" id="schedule">
-			<div className="panel-container">
-				<h1 className="panel-title">Schedule</h1>
-				<iframe src={'https://view.monday.com/embed/5856431756-4344539b9f5333ce6e23f25e721cdd4c?r=use1'} width={'100%'} height={'700'} style={{ borderRadius: '10px', border: '0', boxShadow: '5px 5px 56px 0px rgba(0,0,0,0.25)' }}></iframe>
-			</div>
+		<div className="news-list">
+			{schedule.map((scheduleItem) => {
+				return (
+					<div className="schedule-item" key={scheduleItem.id}>
+						
+					</div>
+				);
+			})}
 		</div>
 	);
 }

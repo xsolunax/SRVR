@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from 'react';
 
-//	{ id: '1', title: '', date: '', imgPath: '' },
-
-const newsList = [
-	{ id: '1', title: 'SRVR ESPORTS will be competing in VCT Open Qualifiers 2', date: 'February 12, 2024', imgPath: 'https://srvr-assets.s3.us-west-1.amazonaws.com/VCT_DAY_1.png' },
-	{ id: '2', title: 'SRVR ESPORTS LOST the first match up of VCT Open Qualifiers 2 against TAMU Maroon', date: 'February 12, 2024', imgPath: 'https://srvr-assets.s3.us-west-1.amazonaws.com/Defeat_vct.png' },
-	{ id: '3', title: 'UBCEA x SFUEA x UVicEA Winter WonderLAN tournament!', date: 'February 17, 2024', imgPath: 'https://srvr-assets.s3.us-west-1.amazonaws.com/MatchDay_UBC.png' },
-];
-
-const sortedNewsList = newsList.map((item) => item).sort((a, b) => parseInt(b.id) - parseInt(a.id));
+//	{ id: '1', title: '', date: '', imgPath: 'https://srvr-assets.s3.us-west-1.amazonaws.com/' },
 
 function NewsCards() {
 	const [news, setNews] = useState([]);
 
 	useEffect(() => {
-		setNews(sortedNewsList);
+		//setNews(sortedNewsList);
+		fetch('http://localhost:3001/newsList')
+			.then((response) => response.json())
+			.then((data) => {
+				console.log(data);
+				const sortedNewsList = data.map((item) => item).sort((a, b) => parseInt(b.id) - parseInt(a.id));
+				setNews(sortedNewsList);
+			})
+			.catch((err) => {
+				console.log(err.message);
+			});debugger
 	}, []);
 
 	return (
